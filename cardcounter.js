@@ -41,6 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
         initializeCardCounts();
     });
 
+    document.getElementById('reset-button').addEventListener('click', function() {
+        location.reload();
+    });
+    
     // Handle card button clicks
     document.getElementById('card-buttons').addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON') {
@@ -77,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // If decks left goes to 0, prompt the user to update the number of decks
         if (decks <= 0) {
+            location.reload();
             promptForDecksAndUpdateCounts();
         }
         
