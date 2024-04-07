@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#deck-true-count-wrapper {
+    text-align: right;
+}
+
+#counts {
+    text-align: center;
+    font-size: 50px;
+}
+
+#card-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+#card-buttons button {
+    margin: 0 10px;
+    padding: 20px 20px;
+}
+
+.progress {
+    background-color: #eee;
+    border-radius: 13px;
+    height: 20px;
+    width: 100%; /* Progress bars will take the full width of the container */
+    margin: 10px auto;
+}
+
+.progress-bar {
+    background-color: #4CAF50; /* Green */
+    height: 100%;
+    border-radius: 11px;
+    transition: width 0.3s ease;
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Additional styles to reduce blank space */
+#likelihoods {
+    margin-top: 20px; /* Space between buttons and bars */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #app {
+        width: 95%; /* Increase width for smaller screens */
+    }
+    #counts {
+        flex-direction: column; /* Stack counts on smaller screens */
+        align-items: center;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+    color: #333;
+    margin-top: 20px;
+}

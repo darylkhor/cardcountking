@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Counting Helper</title>
+    <link rel="stylesheet" href="cardcounter.css"> 
+</head>
+<body>
+    <div id="app">
+        <div id="top-section">
+            <input type="number" id="decks-input" placeholder="Enter number of decks" />
+            <div id="deck-true-count-wrapper">
+                <div id="deck-count">Decks Left: 0</div>
+                <div id="true-count">True Count: 0</div>
+                <div id="cards-left">Cards Left: 0</div>
+            </div>
+        </div>
+        <div id="counts">
+            <div id="running-count">Running Count: 0</div>
+        </div>
+        <div id="card-buttons">
+            <button data-value="low">Low Card</button>
+            <button data-value="neutral">Neutral Card</button>
+            <button data-value="high">High Card</button>
+        </div>
+        <div id="likelihoods">
+            <div>High Card: <div class="progress"><div id="high-likelihood" class="progress-bar"></div></div></div>
+            <div>Low Card: <div class="progress"><div id="low-likelihood" class="progress-bar"></div></div></div>
+            <div>Neutral Card: <div class="progress"><div id="neutral-likelihood" class="progress-bar"></div></div></div>
+        </div>        
+    </div>
+    <script src="cardcounter.js"></script> <!-- Link to your JavaScript file -->
+</body>
+<footer>
+    <p>&copy; 2024 CardCountKing. All rights reserved.</p>
+    <p>Email: <a href="mailto:kingofcardcount@gmail.com">kingofcardcount@gmail.com</a></p>
+</footer>
+</html>
