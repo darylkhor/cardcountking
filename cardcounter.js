@@ -38,6 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update deck count when manually changed
     decksInput.addEventListener('change', function() {
         decks = parseInt(this.value, 10);
+        if (!isNaN(decks) && decks > 0) {
+            resetAndRecalculate(); // Call the new reset function
+        } else {
+            alert("Please enter a valid number of decks.");
+            this.value = decks; // Reset to the previous valid number of decks if the input is invalid
+        }
         initializeCardCounts();
     });
 
@@ -108,5 +114,16 @@ document.addEventListener('DOMContentLoaded', () => {
         neutralLikelihoodBar.style.width = `${neutralLikelihood}%`;
         neutralLikelihoodBar.textContent = `${neutralLikelihood}%`;
 }
+
+    function resetAndRecalculate() {
+        // Reset running count
+        runningCount = 0;
+
+        // Re-initialize card counts based on the new deck count
+        initializeCardCounts();
+
+        // Update UI elements to reflect the reset
+        updateCounts();
+    }
 
 });
