@@ -3,6 +3,8 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100%;
+    background-color: #121212; /* Dark background for dark mode */
+    color: #e0e0e0; /* Light text for readability */
 }
 
 #app {
@@ -16,9 +18,10 @@ body, html {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    background-color: #1e1e1e; /* Slightly lighter shade for section backgrounds */
 }
 
-#deck-true-count-wrapper {
+#deck-true-count-wrapper, #counts, footer {
     text-align: right;
 }
 
@@ -30,54 +33,60 @@ body, html {
 #card-buttons {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px;
 }
 
 #card-buttons button {
     margin: 0 10px;
     padding: 20px 20px;
+    background-color: #333333; /* Darker buttons for contrast */
+    border: 1px solid #555; /* Slight border for definition */
+    border-radius: 5px;
+    color: #ffffff; /* White text for buttons */
+    font-weight: bold;
+    cursor: pointer; /* Indicates that the button is clickable */
 }
 
 .progress {
-    background-color: #eee;
+    background-color: #333333; /* Darker progress bar background */
     border-radius: 13px;
     height: 20px;
-    width: 100%; /* Progress bars will take the full width of the container */
+    width: 100%;
     margin: 10px auto;
 }
 
 .progress-bar {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; /* Green progress bars for visibility */
     height: 100%;
     border-radius: 11px;
     transition: width 0.3s ease;
     text-align: right;
     padding-right: 5px;
-    color: white;
+    color: #121212; /* Dark text for visibility on light progress bars */
     font-size: 14px;
     box-sizing: border-box;
+    font-weight: bold;
 }
 
-/* Additional styles to reduce blank space */
-#likelihoods {
-    margin-top: 20px; /* Space between buttons and bars */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #app {
-        width: 95%; /* Increase width for smaller screens */
-    }
-    #counts {
-        flex-direction: column; /* Stack counts on smaller screens */
-        align-items: center;
-    }
-}
+/* Custom colors for different types of cards within progress bars */
+#high-likelihood { background-color: #ff5555; } /* Bright red for high cards */
+#low-likelihood { background-color: #5555ff; } /* Bright blue for low cards */
+#neutral-likelihood { background-color: #55ff55; } /* Bright green for neutral cards */
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f3f3f3;
-    color: #333;
-    margin-top: 20px;
+    background-color: #1e1e1e; /* Consistent section background */
+    color: #cccccc; /* Lighter text for contrast */
+    margin-top: auto; /* Pushes the footer to the bottom of the viewport */
+}
+
+@media (max-width: 768px) {
+    #app {
+        width: 95%;
+    }
+    #counts {
+        flex-direction: column;
+        align-items: center;
+    }
 }
