@@ -1,3 +1,3 @@
 # cardcountking
-Never lose count 
+Never lose count counting Blackjack
 www.cardcountking.com
