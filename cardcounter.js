@@ -8,6 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const deckCountDisplay = document.getElementById('deck-count');
     const cardsLeftDisplay = document.getElementById('cards-left');
 
+    function updateOnlineUsers() {
+        const minUsers = 90;
+        const maxUsers = 110;
+        const fluctuation = Math.floor(Math.random() * (maxUsers - minUsers + 1)) + minUsers;
+        document.getElementById('online-count').textContent = fluctuation;
+    }
+    
+    // Call this function periodically to update the number
+    setInterval(updateOnlineUsers, 15000); // updates every 5 seconds
+
     // Function to prompt user for number of decks and initialize or update card counts
     function promptForDecksAndUpdateCounts() {
         let input = prompt("Please enter the number of decks", "1");
